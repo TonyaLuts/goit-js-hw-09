@@ -6,3 +6,8 @@ function createPromise(position, delay) {
     // Reject
   }
 }
+const date = new Date();
+console.log(date);
+
+const date2 = Date.now();
+console.log(date2);

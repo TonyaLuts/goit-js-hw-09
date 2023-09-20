@@ -8,8 +8,8 @@ btnStartEl.addEventListener('click', onClickStart);
 btnStopEl.addEventListener('click', onClickStop);
 
 function onClickStart() {
-  if (btnStartEl.disabled === false) {
-  }
+  // if (btnStartEl.disabled === false) {
+  // }
   timerInterval = setInterval(() => {
     bodyEl.style.backgroundColor = getRandomHexColor();
     console.log(timerInterval);
