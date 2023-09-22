@@ -1,12 +1,11 @@
 import Notiflix from 'notiflix';
 
 const form = document.querySelector('form');
-const createBtn = document.querySelector('[submit]');
-const inputDelay = document.querySelector('[name="delay"]');
-const inputStep = document.querySelector('[name="step"]');
-const inputAmount = document.querySelector('[name="amount"]');
+const createBtn = document.querySelector('[type="submit"]');
 
 form.addEventListener('submit', onSubmit);
+
+createBtn.disabled = false;
 
 function onSubmit(event) {
   event.preventDefault();
@@ -38,6 +37,7 @@ function onSubmit(event) {
 }
 
 function createPromise(position, delay) {
+  createBtn.disabled = true;
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       const shouldResolve = Math.random() > 0.3;

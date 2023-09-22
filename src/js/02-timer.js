@@ -30,7 +30,7 @@ timerStart.addEventListener('click', onClickBtn);
 
 timerStart.disabled = true;
 
-function onClickBtn(event) {
+function onClickBtn() {
   countdownTimer();
 }
 
